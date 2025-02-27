@@ -8,7 +8,7 @@
         <link rel="stylesheet" href=".\node_modules\bootstrap\dist\css\bootstrap.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
-<body>
+<body class="bg-dark text-light"><!-- contains everything that will be on the screen // background color dark-->
     <!-- 
     the following div is the navigation bar
     container-fluid: provides the container to be 100% width
@@ -35,17 +35,29 @@
             <a class="text-center bg-primary nav-link text-light col-md-2 border border-dark rounded-3" href="https://blburgen.github.io/QuickStartProjects/">Quick Start Front End Projects</a>
         </nav>
     </div>
-
-    <form action="mailto:bradyburgener@gmail.com" method="post" enctype="text/plain"><!-- form container with send email to perform when submitted -->
-        <label for="firstName">First Name</label><br><!-- label for the first name -->
-        <input type="text" name="firstName" id="firstName"><br><!-- box to put first name in -->
-        <label for="lastName">Last Name</label><br><!-- label for the last name -->
-        <input type="text" name="lastName" id="lastName"><br><!-- box to put last name in -->
-        <label for="comment">Comment</label><br><!-- label for the comment box -->
-        <input type="text" name="comment" size="50"><br><br><!-- comment box -->
-        <input type="submit" value="Send"><!-- button commit the inputs to the action -->
-        <input type="reset" value="Reset"><!-- resets form-->
-    </form>
+    <div class="container-fluid"><!--a fluid container for the Form-->
+        <h1 class="text-center">Form</h1><!--title of the page is centered-->
+        <!--The form will be in fluid container that will changed as the screen size changes
+        With a large screen it will be 8/12 of the screen width
+        with a medium screen it will be 10/12 of the screen width
+        with a smaller screen it will be 12/12 of the screen width
+        the contents will be center justified-->
+        <div class="container-fluid col-lg-8 col-md-10 col-12 justify-content-center">
+            <form action="mailto:bradyburgener@gmail.com" method="post" enctype="text/plain"><!-- form container with send email to perform when submitted -->
+                <!--when the screen is larger then a medium screen the first and last name labels will be next to the text field.  Otherwise the label will be above the text field-->
+                <label class="col-md-2 col-12"for="firstName">First Name</label><!-- label for the first name -->
+                <input class="col-md-9 col-12"type="text" name="firstName" id="firstName"><!-- box to put first name in -->
+                <label class="col-md-2 col-12" for="lastName">Last Name</label><!-- label for the last name -->
+                <input class="col-md-9 col-12"type="text" name="lastName" id="lastName"><!-- box to put last name in -->
+                <label class="col-md-11 col-12"for="comment">Comment</label><!-- label for the comment box -->
+                <input class="col-md-12 col-12" type="text" name="comment" size="500"><!-- comment box -->
+                <div class="container-fluid col-2 justify-content-center">
+                    <input class="col-12" type="submit" value="Send"><!-- button commit the inputs to the action will be centered below the comment text field-->
+                    <input class="col-12"type="reset" value="Reset"><!-- resets form  will be centered below the submit button-->
+                </div>
+            </form>
+        </div>
+    </div>
     
 </body>
 </html>
