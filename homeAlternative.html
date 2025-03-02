@@ -37,22 +37,29 @@
         </nav>
     </div>
     <h1 class="text-center">Quick Start Front End Software Developer Week 03</h1><!-- the title of the page below the link bar text centered -->
-    <div class="container-fluid col-md-7 justify-content-center"><!--table centered 8/12 of the width of the screen-->
-        <table class="table-sm table-bordered border-light"><!--small table with a border that is light(white)-->
-            <thead class="text-center"><!--center the text in the table header-->
-                <th colspan="2" class="fs-4">Project Requirements</th><!--the table header will span 2 columns and have a font size of 4-->
-            </thead>
-            <tbody><!--each row in the table will have two table data cells that span 6/12 of the table-->
-                <tr>
-                    <td class="col-6">At least 2 pages.</td>
-                    <td class="col-6">A Bootstrap navbar, table, and form.</td>
-                </tr>
-                <tr>
-                    <td class="col-6">Bootstrap grid used throughout to format elements</td>
-                    <td class="col-6">Elements should stack vertically when the window is small</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container container-fluid col-md-9 justify-content-center"><!--table centered 9/12 of the width of the screen-->
+        <div class="row border"><!--first row of the table with a border / this row will only have one column to span the table-->
+            <div class="col fs-2 text-center border"><!--a border was added for a wider border / text size was set to fs-2 / text was centered-->
+                <p>Project Requirements</p>
+            </div>
+        </div>
+        <div class="row border"><!--second row of the table with a border / this row will have one to three column to span the table
+            if the screen is large than one column will be on top with three on the bottom
+            if the screen is medium than two columns will be on top and bottom
+            if the screen is smaller than medium there will be only one column-->
+            <div class="col-md-6 col-lg-12 text-lg-center border">
+                <p>At least 2 pages.</p>
+            </div>
+            <div class="col-md-6 col-lg-4 border">
+                <p>A Bootstrap navbar, table, and form.</p>
+            </div>
+            <div class="col-md-6 col-lg-4 border">
+                <p>Bootstrap grid used throughout to format elements</p>
+            </div>
+            <div class="col border">
+                <p>Elements should stack vertically when the window is small</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
