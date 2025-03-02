@@ -13,9 +13,11 @@
     <!-- 
     the following div is the navigation bar
     container-fluid: provides the container to be 100% width
+    navbar: designates it to be formatted as a navbar
     navbar-expand-md: expands when screen is medium or larger 
     navbar-nav: full-height and lightweight navigation 
     nav-link: Navigation link
+    data-bs-theme="dark": provides the navbar with light text
     active: current page
     d-flex: display flex
     justify-content-evenly: justifies the links evenly across the navigation bar
@@ -23,6 +25,7 @@
     bg-primary: background color primary (blue)
     text-light: text color light (white)
     col-md-2: column when medium screen size or larger is 2/12
+    col-12: column is full screen width as default
     border: gives the item a border
     border-dark: the border color is dark (black)
     rounded-3: rounds the ends of the border
@@ -31,10 +34,10 @@
         <nav class="navbar navbar-nav d-flex justify-content-evenly" data-bs-theme="dark">
             <ul class="navbar-nav col-md-2 col-12">
                 <li class="col-md text-center bg-primary border border-dark rounded-3">
-                    <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><!--Create a dropdown button-->
                         &dArr; Home Page &dArr;
                     </a>
-                    <ul class="dropdown-menu col-md-2 col-12">
+                    <ul class="dropdown-menu col-md-2 col-12 ms-md-4">
                         <li><a class="text-center bg-primary nav-link border border-dark rounded-3" href="index.html">Home Page</a></li>
                         <li><a class="text-center bg-primary nav-link active border border-dark rounded-3" href="homeAlternative.html">Home Page Alternative</a></li>
                     </ul>
